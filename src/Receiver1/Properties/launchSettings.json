@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Receiver1": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}

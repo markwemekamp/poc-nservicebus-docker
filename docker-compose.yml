@@ -1,0 +1,26 @@
+version: '3.4'
+
+services:
+  sender:
+    image: ${DOCKER_REGISTRY-}sender
+    build:
+      context: .
+      dockerfile: src/Sender/Dockerfile
+    volumes:
+      - c:/temp/docker-test:/data
+
+  receiver1:
+    image: ${DOCKER_REGISTRY-}receiver1
+    build:
+      context: .
+      dockerfile: src/Receiver1/Dockerfile
+    volumes:
+      - c:/temp/docker-test:/data
+
+  receiver2:
+    image: ${DOCKER_REGISTRY-}receiver2
+    build:
+      context: .
+      dockerfile: src/Receiver2/Dockerfile
+    volumes:
+      - c:/temp/docker-test:/data
